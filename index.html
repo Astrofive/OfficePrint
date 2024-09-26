@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HPE SecurePrint Guide</title>
+  <title>HPE OfficePrint Guide</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- HPE Header/Footer service-->
+  <script src="https://h50007.www5.hpe.com/hfws-static/js/framework/jquery/v-3-6-0/jquery.js"></script>
+  <script src="https://h50007.www5.hpe.com/hfws/us/en/hpe/latest.r/root?contentType=js&switchToCHF=true"></script>
+  
   <style>
     body {
-      color: #6a6c6f;
+      color: #232323;
       background-color: #f1f3f6;
       margin-top: 30px;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 600px;
+      padding: 30px 20px 100px 20px;
     }
 
     .title {
-      color: #01a982;
+      color: #222222;
       font-weight: 800;
-      font-size: 3rem;
+      font-size: 2.5rem;
       padding: 0 0 2rem 0.5rem
     }
 
@@ -50,7 +56,6 @@
       content: "";
       position: relative;
       top: 1px;
-      display: inline-block;
       font-family: 'Glyphicons Halflings';
       font-style: normal;
       font-weight: 400;
@@ -85,12 +90,26 @@
       height: 480px;
      }
 
+     .faq-question {
+      font-weight: bold;
+      margin-bottom: 2px;
+     }
+
+     .faq-answer {
+      margin-bottom: 25px;
+     }
+
   </style>
 </head>
 <body>
+
+  <div id="header" class="header"></div>
+		<!-- HFWS will insert its header here -->
+	</div>
+
   <div class="container">
     <div class="accordion-option">
-      <h3 class="title">HPE SecurePrint Guide</h3>
+      <h3 class="title">HPE OfficePrint Guide</h3>
       <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
     </div>
     <div class="clearfix"></div>
@@ -107,10 +126,11 @@
           <div class="panel-body">
 
             <div class="video-container">
-	      <video width="95%" height="95%" controls>
-        	<source src="video.mp4" type="video/mp4">
-        	Your browser does not support the video tag.
-    	      </video>
+              <h3>Video coming soon</h3>
+            <!-- <video width="95%" height="95%" controls>
+              <source src="video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
 	    </div>
 
           </div>
@@ -126,12 +146,59 @@
         </div>
         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="panel-body">
-            <strong>People still print things?</strong>
-            <br>
-            Yes they do!
+            <div class="faq-item">
+              <p class="faq-question">Do I have to be at an HPE office to print?</p>
+              <p class="faq-answer">No. Once you send your document to the printer, it will stay in the queue for 48 hours until you are in the office and ready to print. Once you arrive at the office, head to a printer, scan your badge, and select the document you’d like to print.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">Do I have to register my badge every time I print?</p>
+              <p class="faq-answer">You only have to complete registration once (and you might already be registered). Just remember to bring your badge with you every time you need to retrieve a print job. You need to scan your badge to activate the printer and select which documents you’d like to print.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">How do I know if I am registered?</p>
+              <p class="faq-answer">When you scan your badge over the card reader, your name will appear on the printer screen. If you haven’t registered, a prompt asking you for your NT username and password will appear.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">Can I print at any printer located at an HPE Site?</p>
+              <p class="faq-answer">Yes, once you select print on the print menu of your document, you can head to any printer on site, scan your badge, and select the document from the queue.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">What if I need to cancel my printing?</p>
+              <p class="faq-answer">If you need to cancel a print job you can do so directly through the menu at an onsite printer. Scan your badge to access your print queue and select cancel.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">HPE OFFICEPRINT is not selected as my default printer. What do I do?</p>
+              <p class="faq-answer">If you do not see HPE OFFICEPRINT as the default printer, use the drop-down menu to manually select HPE OFFICEPRINT as your printer source. If this is not an option for you, or if you have additional questions, please contact myIT Support.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">Which option do I select on the print menu?</p>
+              <p class="faq-answer">With the recent rollout, HPE OFFICEPRINT should now be the default printer. Your document print menu may still include “SecurePrint” and printing options used previously.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">Why do the printer options still include SecurePrint?</p>
+              <p class="faq-answer">To support a smooth rollout and transition to HPE OfficePrint, any previous printing options such as SecurePrint or PPD will be available for several weeks. It’s recommended you use HPE OfficePrint going forward, as eventually the other print options will sunset.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">The prior way I was printing still works, do I have to start using HPE OfficePrint?</p>
+              <p class="faq-answer">Yes, “HPE OfficePrint” will be the main supported option going forward.</p>
+            </div>
+            
+            <div class="faq-item">
+              <p class="faq-question">Does HPE OfficePrint work on all HPE distributed computers and operating systems?</p>
+              <p class="faq-answer">Yes, HPE OfficePrint works on any HPE-issued Windows/MacOS system. For Mac users, please contact the IT helpdesk and submit a ticket to L3 print support to activate HPE OfficePrint.</p>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingThree">
           <h4 class="panel-title">
@@ -142,14 +209,21 @@
         </div>
         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
           <div class="panel-body">
-            For further support...
+            For support, please visit 
+            <a href="https://myitsupport.ext.hpe.com/myITsupport/ITSContactSupport" target="_blank">myITsupport</a>.
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <div id="footer" class="footer"></div>
+		<!-- HFWS will insert its footer here -->
+	</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -176,5 +250,4 @@
       }
     });
   </script>
-</body>
 </html>
